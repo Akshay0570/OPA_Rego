@@ -20,6 +20,8 @@ $ package terraform
 # imported input
 import input.tfplan as tfplan
 # For policy code refer to the file with extension ".rego"
+#Below command used to check the plan
+./opa eval --format pretty --data plan.rego --input plan.json "data.terraform"
 # Check the Terraform plan against the OPA policy
 opa eval - format pretty - data FILENAME.rego - input FILENAME.json "data.terraform"
 # Explanation about above command
